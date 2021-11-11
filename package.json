@@ -1,0 +1,45 @@
+{
+  "name": "editoraqa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:open:prod": "cypress open --env configFile=prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lam-Pa/editorAuto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lam-Pa/editorAuto/issues"
+  },
+  "homepage": "https://github.com/Lam-Pa/editorAuto#readme",
+  "Dependencies": {
+    "cypress": "^7.7.0",
+    "@types/faker": "^5.1.7",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-image-snapshot": "^4.0.1",
+    "emailjs-imap-client": "^3.1.0",
+    "faker": "5.5.1",
+    "nodemailer": "6.6.0",
+    "mocha": "^8.2.0",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
+  },
+  "devDependencies": {
+    "@rckeller/cypress-unfetch": "^1.0.1",
+    "cypress": "^8.7.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-xpath": "^1.6.2",
+    "del": "^6.0.0"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
+  }
+}
