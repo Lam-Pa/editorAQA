@@ -34,7 +34,27 @@ const cal = ['http://judges.fotokasten.at/wandkalender-a4-quer.html', 'http://ju
 'http://judges.fotokasten.at/wandkalender-40x40.html', 'http://judges.fotokasten.at/wandkalender-premium-a3-quer.html',
 'http://judges.fotokasten.at/wandkalender-premium-a4-quer.html', 'http://judges.fotokasten.at/wandkalender-30x30.html',
 'http://judges.fotokasten.at/wandkalender-a2-hoch.html', 'http://judges.fotokasten.at/echtfotokalender-30x30.html',
-]
+'https://judges.fotokasten.at/wandkalender-a2-quer.html', 'https://judges.fotokasten.at/wandkalender-premium-a3-hoch.html',
+'https://judges.fotokasten.at/wandkalender-premium-a4-hoch.html', 'https://judges.fotokasten.at/wandkalender-a5-quer.html',
+'https://judges.fotokasten.at/wandkalender-47x47.html', 'https://judges.fotokasten.at/kuechenkalender-gross.html',
+'https://judges.fotokasten.at/echtfotokalender-a4-hoch.html', 'https://judges.fotokasten.at/tischkalender-a5-quer.html',
+'https://judges.fotokasten.at/tischkalender-klein.html', 'https://judges.fotokasten.at/postkartenkalender.html',
+'https://judges.fotokasten.at/tischkalender.html', 'https://judges.fotokasten.at/cd-tischkalender.html',
+'https://judges.fotokasten.at/triangelkalender.html', 'https://judges.fotokasten.at/echtfotokalender-a3-quer.html',
+'https://judges.fotokasten.at/foto-adventskalender-ohne-schokolade.html', 'https://judges.fotokasten.at/echtfotokalender-20x20.html',
+'https://judges.fotokasten.at/echtfotokalender-a3-hoch.html', 'https://judges.fotokasten.at/echtfotokalender-a4-quer.html',
+'https://judges.fotokasten.at/jahresplaner-a2.html', 'https://judges.fotokasten.at/jahresplaner-a3.html',
+'https://judges.fotokasten.at/klappkalender-a2.html', 'https://judges.fotokasten.at/kuechenkalender.html',
+'https://judges.fotokasten.at/klappkalender-a3.html', 'https://judges.fotokasten.at/vintage-kalender.html']
+
+const calName = ['Wandkalender A4 quer', 'Wandkalender A4 hoch', 'Wandkalender A3 quer', 'Familienplaner A3 hoch',
+'Wandkalender 20x20', 'Wandkalender A3 hoch', 'Wandkalender 40x40', 'Wandkalender Premium A3 quer', 'Wandkalender Premium A4 quer',
+'Wandkalender 30x30', 'Wandkalender A2 hoch', 'Echtfotokalender 30x30', 'Wandkalender A2 quer', 'Wandkalender Premium A3 hoch',
+'Wandkalender Premium A4 hoch', 'Wandkalender A5 quer', 'Wandkalender 47x47', 'Küchenkalender groß', 'Echtfotokalender A4 hoch',
+'Tischkalender A5 quer', 'Tischkalender klein', 'Postkartenkalender', 'Tischkalender', 'CD-Tischkalender', 'Triangelkalender',
+'Echtfotokalender A3 quer', 'Echtfotokalender A3 quer', 'Foto Adventskalender ohne Schokolade', 'Echtfotokalender 20x20',
+'Echtfotokalender A3 hoch', 'Echtfotokalender A4 quer', 'Jahresplaner A2', 'Jahresplaner A3', 'Klappkalender A2',
+'Küchenkalender', 'Klappkalender A3', 'Vintage Kalender']
 
 
 class Common {
