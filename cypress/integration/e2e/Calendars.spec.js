@@ -2,11 +2,7 @@
 
 import CommonCal from "../../common/CommonCal";
 import MainPage from "../../pageObjects/MainPage";
-<<<<<<< HEAD
-import CalendarPage from "../../pageObjects/CalendarsPage"
-=======
 import CalendarsPage from "../../pageObjects/CalendarsPage"
->>>>>>> f710f024a437c015129c8b5f21c50fa766c97d1c
 import faker from 'faker';
 const { getProjectCal } = require ("../../support/dataGenerator")
 
@@ -28,45 +24,25 @@ describe('Go to Calendars', () => {
 
     it('Go to CalendarsCategory', ()=>{ 
         MainPage.open();
-<<<<<<< HEAD
-        CalendarPage.clickCalendar();
+        CalendarsPage.clickCalendar();
     })
 
     it('Go to PhotoBook Upload Files', ()=>{
         const project = getProjectCal();
         project.title = cal[34]
-        CalendarPage.open()
-        CalendarPage.clickCal(project.title);
-        CalendarPage.clickUploadBTN();
-        Common.uploadFiletoProject(project.title);
-=======
-        CalendarsPage.clickCalendar();
-    })
-
-    it('Go to Calendar Upload Files', ()=>{
-        const calendars = getProjectCal();
         CalendarsPage.open()
-        CalendarsPage.clickCal(calendars.title);
+        CalendarsPage.clickCal(project.title);
         CalendarsPage.clickUploadBTN();
-        Common.uploadFiletoProject(calendars.title);
->>>>>>> f710f024a437c015129c8b5f21c50fa766c97d1c
+        CommonCal.uploadFiletoProject(project.title);
     })
 
     it('Go to PhotoBook Upload 1 File error', ()=>{
         const project = getProjectCal();
-<<<<<<< HEAD
         project.title = cal[34]
-        CalendarPage.open()
-        CalendarPage.clickCalendar(project.title);
-        CalendarPage.clickUploadBTN();
-        Common.uploadOneFiletoProjectWarning(cal[34]);
-=======
-        project.title = cal[37]
         CalendarsPage.open()
-        CalendarsPage.clickCal(calendars.title);
+        CalendarsPage.clickCalendar(project.title);
         CalendarsPage.clickUploadBTN();
-        Common.uploadOneFiletoProjectWarning(cal[37]);
->>>>>>> f710f024a437c015129c8b5f21c50fa766c97d1c
+        CommonCal.uploadOneFiletoProjectWarning(cal[34]);
     })
     
 })
