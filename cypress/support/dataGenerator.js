@@ -10,7 +10,11 @@ const project = ['Fotoheft A4 hoch','Fotobuch Hardcover A4 quer', 'Fotobuch Hard
 'Fotobuch Spiralbindung 20x20', 'Fotobuch Leder 30x30', 'Fotobuch Leder A3 quer', 'Fotobuch Spiralbindung A6 quer',
 'Fotobuch Leder A4 hoch', 'Fotobuch Leinen 30x30', 'Fotobuch Leder A4 quer']
 
+<<<<<<< HEAD
 const calName = ['Wandkalender A4 quer', 'Wandkalender A4 hoch', 'Wandkalender A3 quer', 'Familienplaner A3 hoch',
+=======
+const calendars = ['Wandkalender A4 quer', 'Wandkalender A4 hoch', 'Wandkalender A3 quer', 'Familienplaner A3 hoch',
+>>>>>>> f710f024a437c015129c8b5f21c50fa766c97d1c
 'Wandkalender 20x20', 'Wandkalender A3 hoch', 'Wandkalender 40x40', 'Wandkalender Premium A3 quer', 'Wandkalender Premium A4 quer',
 'Wandkalender 30x30', 'Wandkalender A2 hoch', 'Echtfotokalender 30x30', 'Wandkalender A2 quer', 'Wandkalender Premium A3 hoch',
 'Wandkalender Premium A4 hoch', 'Wandkalender A5 quer', 'Wandkalender 47x47', 'Küchenkalender groß', 'Echtfotokalender A4 hoch',
@@ -27,7 +31,11 @@ export const getProject = () => {
 
 export const getProjectCal = () => {
     return {
+<<<<<<< HEAD
         title : faker.random.arrayElement(calName)
+=======
+        title : faker.random.arrayElement(calendars)
+>>>>>>> f710f024a437c015129c8b5f21c50fa766c97d1c
     }
 }
 
