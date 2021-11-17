@@ -1,6 +1,6 @@
 // import * as cypress from "cypress";
 
-import Common from "../../common/Common";
+import CommonCal from "../../common/CommonCal";
 import MainPage from "../../pageObjects/MainPage";
 <<<<<<< HEAD
 import CalendarPage from "../../pageObjects/CalendarsPage"
