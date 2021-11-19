@@ -12,15 +12,16 @@ const imageArr25 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', '
 const imageArr13 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/14img.jpeg', 'image/15img.jpeg',
     'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg', 'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg']
 
-const imageArr19 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/14img.jpeg', 'image/15img.jpeg',
-    'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg', 'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg', 'image/1img.jpeg',
-    'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/38img.jpg']
+const imageArr14 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/14img.jpeg', 'image/15img.jpeg',
+    'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg', 'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg', 'image/1img.jpeg',]
 
 const onePhoto = 'image/38img.jpg'
 
 const adscalLink = ['https://judges.fotokasten.at/schachtel-adventskalender-zum-befullen.html', 'https://judges.fotokasten.at/foto-adventskalender-mit-schokolade.html', 'https://judges.fotokasten.at/foto-adventskalender-ohne-schokolade.html','https://judges.fotokasten.at/foto-adventskalender-ruck-zuck-mit-schokolade.html', 'https://judges.fotokasten.at/foto-adventskalender-design-mit-schokolade.html']
 
 const adscalName = ['Schachtel-Adventskalender zum Befüllen', 'Foto Adventskalender mit Schokolade', 'Foto Adventskalender ohne Schokolade', 'Foto Adventskalender Ruck Zuck mit Schokolade', 'Foto Adventskalender Design mit Schokolade']
+
+class CommonACal {
 
 uploadFile(pictureArray) {
     cy.get(s.uploadBTN).attachFile(pictureArray);
@@ -60,3 +61,5 @@ uploadOneFiletoProjectWarning(projectTitle) {
     }
 
 }
+}
+export default new CommonACal();

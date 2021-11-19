@@ -3,19 +3,7 @@ const s = {
     uploadBTN: 'input[type="file"]',
 }
 
-const imageArr25 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg',
-    'image/14img.jpeg', 'image/15img.jpeg', 'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg',
-    'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg', 'image/27img.jpeg',
-    'image/28img.jpeg', 'image/29img.jpeg', 'image/30img.jpg', 'image/31img.jpeg',
-    'image/32img.jpeg', 'image/33img.jpeg', 'image/34img.jpeg', 'image/35img.jpeg', 'image/36img.jpeg',
-    'image/37img.jpeg', 'image/38img.jpg']
-
-const imageArr13 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/14img.jpeg', 'image/15img.jpeg',
-    'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg', 'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg']
-
-const imageArr19 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/14img.jpeg', 'image/15img.jpeg',
-    'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg', 'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg', 'image/1img.jpeg',
-    'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/38img.jpg']
+const imageArr1 = ['image/1img.jpeg']
 
 const onePhoto = 'image/38img.jpg'
 
@@ -23,6 +11,8 @@ const wandLink = ['https://judges.fotokasten.at/flexible-fotowand-mit-klebemagne
 'https://judges.fotokasten.at/leinwand.html', 'https://judges.fotokasten.at/forex.html', 'https://judges.fotokasten.at/acrylglas-mit-rahmen.html', 'https://judges.fotokasten.at/acrylglas-auf-alu-dibond.html', 'https://judges.fotokasten.at/alu-dibond.html', 'https://judges.fotokasten.at/leinwand-mit-rahmen.html', 'https://judges.fotokasten.at/poster-auf-echtem-fotopapier.html']
 
 const wandName = ['Flexible Fotowand mit Klebemagnet', 'Poster', 'Acrylglas', 'Leinwand', 'Forex', 'Acrylglas mit Rahmen', 'Acrylglas auf Alu-Dibond', 'Alu-dibond', 'Leinwand mit Rahmen', 'Poster auf echtem Fotopapier']
+
+class CommonWand {
 
 uploadFile(pictureArray) {
     cy.get(s.uploadBTN).attachFile(pictureArray);
@@ -60,5 +50,6 @@ uploadOneFiletoProjectWarning(projectTitle) {
         cy.get(s.uploadBTN).attachFile(onePhoto);
         cy.contains('[class*="chakra-text"]', 'Select only one photo').should('exist')
     }
-
 }
+}
+export default new CommonWand();

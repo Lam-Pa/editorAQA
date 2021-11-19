@@ -2,25 +2,17 @@ const s = {
     uploadBTN: 'input[type="file"]',
 }
 
-const imageArr25 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg',
-    'image/14img.jpeg', 'image/15img.jpeg', 'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg',
-    'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg', 'image/27img.jpeg',
-    'image/28img.jpeg', 'image/29img.jpeg', 'image/30img.jpg', 'image/31img.jpeg',
-    'image/32img.jpeg', 'image/33img.jpeg', 'image/34img.jpeg', 'image/35img.jpeg', 'image/36img.jpeg',
-    'image/37img.jpeg', 'image/38img.jpg']
+const imageArr1 = ['image/1img.jpeg']
 
-const imageArr13 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/14img.jpeg', 'image/15img.jpeg',
-    'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg', 'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg']
+const imageArr2 = ['image/1img.jpeg', 'image/10img.jpeg']
 
-const imageArr19 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/14img.jpeg', 'image/15img.jpeg',
-    'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg', 'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg', 'image/1img.jpeg',
-    'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/38img.jpg']
+const imageArr3 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg']
 
 const onePhoto = 'image/38img.jpg'
 
 const grusLink = ['https://judges.fotokasten.at/klappkarte-quer-lang.html', 'https://judges.fotokasten.at/klappkarte-breit-lang.html', 'https://judges.fotokasten.at/klappkarte-hoch.html', 'https://judges.fotokasten.at/klappkarte-breit.html', 'https://judges.fotokasten.at/klappkarte-quer.html', 'https://judges.fotokasten.at/tischkarten-10er-set.html', 'https://judges.fotokasten.at/klappkarte-quer-lang-10er-set.html', 'https://judges.fotokasten.at/klappkarte-breit-lang-10er-set.html', 'https://judges.fotokasten.at/klappkarte-breit-10er-set.html', 'https://judges.fotokasten.at/postkarte-12er-set.html', 'https://judges.fotokasten.at/klappkarte-quer-10er-set.html', 'https://judges.fotokasten.at/klappkarte-hoch-10er-set.html', 'https://judges.fotokasten.at/postkarte-lang.html', 'https://judges.fotokasten.at/postkarte.html']
 
-
+class CommonGrus {
 
 uploadFile(pictureArray) {
     cy.get(s.uploadBTN).attachFile(pictureArray);
@@ -60,6 +52,8 @@ uploadOneFiletoProjectWarning(projectTitle) {
     }
 
 }
+}
+export default new CommonGrus();
 
 
 

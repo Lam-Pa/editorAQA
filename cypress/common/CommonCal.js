@@ -12,9 +12,7 @@ const imageArr25 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', '
 const imageArr13 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/14img.jpeg', 'image/15img.jpeg',
     'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg', 'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg']
 
-const imageArr19 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/14img.jpeg', 'image/15img.jpeg',
-    'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg', 'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg', 'image/1img.jpeg',
-    'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/38img.jpg']
+const imageArr3 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg']
 
 const onePhoto = 'image/38img.jpg'
 
@@ -66,7 +64,7 @@ uploadFiletoProject(projectTitle) {
             .eq(17)
             .should('exist');
     } else {
-        this.uploadFile(imageArr);
+        this.uploadFile(imageArr13);
         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
             .eq(23)
             .should('exist');

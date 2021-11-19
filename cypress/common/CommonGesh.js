@@ -2,15 +2,9 @@ const s = {
     uploadBTN: 'input[type="file"]',
 }
 
-const imageArr25 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg',
-    'image/14img.jpeg', 'image/15img.jpeg', 'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg',
-    'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg', 'image/27img.jpeg',
-    'image/28img.jpeg', 'image/29img.jpeg', 'image/30img.jpg', 'image/31img.jpeg',
-    'image/32img.jpeg', 'image/33img.jpeg', 'image/34img.jpeg', 'image/35img.jpeg', 'image/36img.jpeg',
-    'image/37img.jpeg', 'image/38img.jpg']
+const imageArr1 = ['image/1img.jpeg']
 
-const imageArr13 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/14img.jpeg', 'image/15img.jpeg',
-    'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg', 'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg']
+const imageArr2 = ['image/1img.jpeg', 'image/10img.jpeg']
 
 const imageArr19 = ['image/1img.jpeg', 'image/10img.jpeg', 'image/11img.jpeg', 'image/12img.jpeg', 'image/13img.jpeg', 'image/14img.jpeg', 'image/15img.jpeg',
     'image/16img.jpeg', 'image/17img.jpeg', 'image/18img.jpeg', 'image/19img.jpeg', 'image/21img.jpeg', 'image/26img.jpeg', 'image/1img.jpeg',
@@ -49,6 +43,7 @@ const geshLink = ['https://judges.fotokasten.at/thermosflasche.html', 'https://j
 
 const geshName = ['Thermosflasche 0,5l', 'Glas Windlicht mit Foto', 'Fototasse', 'My memory®', 'Zweifarbtasse', 'Ravensburger Fotopuzzle', 'Schlüsselanhänger', 'Metall Brotdose', 'Lesezeichen', 'Frühstücksbrettchen', 'Panorama-Fototasse', 'Müslischale', 'Blechdosen', 'Kuschelkissen', 'Tischset', 'Foto Magnet', 'Fußmatten', 'Lindt Schokokarte', 'Taschenalbum', 'Fotodecke', 'Lindt Schokolade mit Foto', 'Lindt Foto-Pralinés', 'Mousepad', 'Süßigkeitendose mit Foto', 'Kinderteller', 'Fototasse Metallic', 'Fotokissen Standard', 'Turnbeutel', 'Mäppchen', 'Acrylglas-Aufsteller mit Foto', 'Foto-Uhr quadratisch', 'Foto-Uhr rund', 'Acrylglas-Vase', 'Schneekugel mit Foto', 'Schiefersteinplatten', 'Magnettafel', 'Windlicht', 'Lederbörse', 'Foto-Schürze', 'Fotofächer', 'Zaubertasse', 'iPad Hülle mit Foto', 'iPad Tasche mit Foto', 'Samsung Galaxy Hüllen', 'Melamin Teller mit Foto', 'Bierkrug mit Foto', 'iPhone Hüllen', 'Stoffbeutel', 'Weizenbierglas mit Foto', 'Sektglas mit Foto', 'Lunchbox mit Foto', 'Biergläser', 'Trinkglas', 'Whiskyglas', 'Thermobecher']
 
+class CommonGesh {
 
 uploadFile(pictureArray) {
         cy.get(s.uploadBTN).attachFile(pictureArray);
@@ -88,3 +83,5 @@ uploadFile(pictureArray) {
         }
 
     }
+}
+export default new CommonGesh();
