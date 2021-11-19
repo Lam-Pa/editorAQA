@@ -13,7 +13,7 @@ const s = {
 class CalendarsPage{
     
     open(){
-        cy.visit('http://judges.fotokasten.at/fotokalender');
+        cy.visit('https://judges.fotokasten.at/fotokalender');
     }
     clickCalendar() {
         cy.contains(s.builderMenu, s.calendarButton).click();
