@@ -27,7 +27,7 @@ describe('Go to Calendars', () => {
         CalendarsPage.clickCalendar();
     })
 
-    it('Go to PhotoBook Upload Files', ()=>{
+    it('Go to CaledarsUpload Upload Files', ()=>{
         const project = getProjectCal();
         project.title = cal[34]
         CalendarsPage.open()
@@ -36,7 +36,7 @@ describe('Go to Calendars', () => {
         CommonCal.uploadFiletoProject(project.title);
     })
 
-    it('Go to PhotoBook Upload 1 File error', ()=>{
+    it('Go to Calendars Upload 1 File error', ()=>{
         const project = getProjectCal();
         project.title = cal[34]
         CalendarsPage.open()
