@@ -11,12 +11,12 @@ const cal = ['Wandkalender A4 quer', 'Wandkalender A4 hoch', 'Wandkalender A3 qu
 'Wandkalender 30x30', 'Wandkalender A2 hoch', 'Echtfotokalender 30x30', 'Wandkalender A2 quer', 'Wandkalender Premium A3 hoch',
 'Wandkalender Premium A4 hoch', 'Wandkalender A5 quer', 'Wandkalender 47x47', 'Küchenkalender groß', 'Echtfotokalender A4 hoch',
 'Tischkalender A5 quer', 'Tischkalender klein', 'Postkartenkalender', 'Tischkalender', 'CD-Tischkalender', 'Triangelkalender',
-'Echtfotokalender A3 quer', 'Echtfotokalender A3 quer', 'Foto Adventskalender ohne Schokolade', 'Echtfotokalender 20x20',
+'Echtfotokalender A3 quer', 'Echtfotokalender A3 quer', 'Echtfotokalender 20x20',
 'Echtfotokalender A3 hoch', 'Echtfotokalender A4 quer', 'Jahresplaner A2', 'Jahresplaner A3', 'Klappkalender A2',
 'Küchenkalender', 'Klappkalender A3', 'Vintage Kalender']
 
 
-describe('Go to Calendars', () => {
+describe('Calendars upload', () => {
     
     beforeEach(() => {
         cy.setCookie('euconsent-v2', 'CPNkEdmPNkEdmAHABBENBvCgAP_AAE7AAAAAF5wAQF5gXnABAXmAAAAA.f_gACdgAAAAA')
@@ -29,7 +29,6 @@ describe('Go to Calendars', () => {
 
     it('Go to CaledarsUpload Upload Files', ()=>{
         const project = getProjectCal();
-        project.title = cal[34]
         CalendarsPage.open()
         CalendarsPage.clickCal(project.title);
         CalendarsPage.clickUploadBTN();
@@ -38,11 +37,10 @@ describe('Go to Calendars', () => {
 
     it('Go to Calendars Upload 1 File error', ()=>{
         const project = getProjectCal();
-        project.title = cal[34]
         CalendarsPage.open()
-        CalendarsPage.clickCalendar(project.title);
+        CalendarsPage.clickCal(project.title);
         CalendarsPage.clickUploadBTN();
-        CommonCal.uploadOneFiletoProjectWarning(cal[34]);
+        CommonCal.uploadOneFiletoProjectWarning(cal[36]);
     })
     
 })
