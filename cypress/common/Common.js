@@ -107,239 +107,239 @@ class Common {
 
     }
 
-    uploadFile(pictureArray) {
-        cy.get(s.uploadBTN).attachFile(pictureArray);
-        cy.wait(60000);
-        cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
-    }
+    // uploadFile(pictureArray) {
+    //     cy.get(s.uploadBTN).attachFile(pictureArray);
+    //     cy.wait(60000);
+    //     cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
+    // }
 
-    uploadFiletoProject(projectTitle) {
-        if (projectTitle === cal[0] || projectTitle === cal[1] || projectTitle === cal[2] || projectTitle === cal[3] || projectTitle === cal[4] || projectTitle === cal[5] || projectTitle === cal[6] || projectTitle === cal[7] || projectTitle === cal[8] || projectTitle === cal[9] || projectTitle === cal[10] || projectTitle === cal[11] || projectTitle === cal[12] || projectTitle === cal[13] || projectTitle === cal[14] || projectTitle === cal[15] || projectTitle === cal[16] || projectTitle === cal[17] || projectTitle === cal[18] || projectTitle === cal[19] || projectTitle === cal[20] || projectTitle === cal[21] || projectTitle === cal[22] || projectTitle === cal[23] || projectTitle === cal[25] || projectTitle === cal[27] || projectTitle === cal[28] || projectTitle === cal[29] || projectTitle === cal[32] || projectTitle === cal[33] || projectTitle === cal[34]) {
-            this.uploadFile(imageArr13);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(11)
-                .should('exist');
-        } else if (projectTitle === pb[30] || projectTitle === pb[31]) {
-            this.uploadFile(imageArr4);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(17)
-                .should('exist');
-        } else (projectTitle === cal[24]); {
-            this.uploadFile(imageArr3);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(23)
-                .should('exist');
-        }
-    }
+    // uploadFiletoProject(projectTitle) {
+    //     if (projectTitle === cal[0] || projectTitle === cal[1] || projectTitle === cal[2] || projectTitle === cal[3] || projectTitle === cal[4] || projectTitle === cal[5] || projectTitle === cal[6] || projectTitle === cal[7] || projectTitle === cal[8] || projectTitle === cal[9] || projectTitle === cal[10] || projectTitle === cal[11] || projectTitle === cal[12] || projectTitle === cal[13] || projectTitle === cal[14] || projectTitle === cal[15] || projectTitle === cal[16] || projectTitle === cal[17] || projectTitle === cal[18] || projectTitle === cal[19] || projectTitle === cal[20] || projectTitle === cal[21] || projectTitle === cal[22] || projectTitle === cal[23] || projectTitle === cal[25] || projectTitle === cal[27] || projectTitle === cal[28] || projectTitle === cal[29] || projectTitle === cal[32] || projectTitle === cal[33] || projectTitle === cal[34]) {
+    //         this.uploadFile(imageArr13);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(11)
+    //             .should('exist');
+    //     } else if (projectTitle === pb[30] || projectTitle === pb[31]) {
+    //         this.uploadFile(imageArr4);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(17)
+    //             .should('exist');
+    //     } else (projectTitle === cal[24]); {
+    //         this.uploadFile(imageArr3);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(23)
+    //             .should('exist');
+    //     }
+    // }
 
-    uploadOneFiletoProjectWarning(projectTitle) {
-        if (projectTitle === cal[0] || projectTitle === cal[1] || projectTitle === cal[2] || projectTitle === cal[3] || projectTitle === cal[4] || projectTitle === cal[5] || projectTitle === cal[6] || projectTitle === cal[7] || projectTitle === cal[8] || projectTitle === cal[9] || projectTitle === cal[10] || projectTitle === cal[11] || projectTitle === cal[12] || projectTitle === cal[13] || projectTitle === cal[14] || projectTitle === cal[15] || projectTitle === cal[16] || projectTitle === cal[17] || projectTitle === cal[18] || projectTitle === cal[19] || projectTitle === cal[20] || projectTitle === cal[21] || projectTitle === cal[22] || projectTitle === cal[23] || projectTitle === cal[25] || projectTitle === cal[27] || projectTitle === cal[28] || projectTitle === cal[29] || projectTitle === cal[32] || projectTitle === cal[33] || projectTitle === cal[34]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
-        } else if (projectTitle === cal[30] || projectTitle === cal[31]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
-        } else {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
-        }
+    // uploadOneFiletoProjectWarning(projectTitle) {
+    //     if (projectTitle === cal[0] || projectTitle === cal[1] || projectTitle === cal[2] || projectTitle === cal[3] || projectTitle === cal[4] || projectTitle === cal[5] || projectTitle === cal[6] || projectTitle === cal[7] || projectTitle === cal[8] || projectTitle === cal[9] || projectTitle === cal[10] || projectTitle === cal[11] || projectTitle === cal[12] || projectTitle === cal[13] || projectTitle === cal[14] || projectTitle === cal[15] || projectTitle === cal[16] || projectTitle === cal[17] || projectTitle === cal[18] || projectTitle === cal[19] || projectTitle === cal[20] || projectTitle === cal[21] || projectTitle === cal[22] || projectTitle === cal[23] || projectTitle === cal[25] || projectTitle === cal[27] || projectTitle === cal[28] || projectTitle === cal[29] || projectTitle === cal[32] || projectTitle === cal[33] || projectTitle === cal[34]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
+    //     } else if (projectTitle === cal[30] || projectTitle === cal[31]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
+    //     } else {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
+    //     }
 
-    }
+    // }
 
-    uploadFile(pictureArray) {
-        cy.get(s.uploadBTN).attachFile(pictureArray);
-        cy.wait(60000);
-        cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
-    }
+    // uploadFile(pictureArray) {
+    //     cy.get(s.uploadBTN).attachFile(pictureArray);
+    //     cy.wait(60000);
+    //     cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
+    // }
 
-    uploadFiletoProject(projectTitle) {
-        if (projectTitle === acal[1] || projectTitle === acal[2] || projectTitle === acal[3] || projectTitle === acal[4]) {
-            this.uploadFile(imageArr25);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(11)
-                .should('exist');
-        } else if (projectTitle === acal[0]) {
-            this.uploadFile(imageArr);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(17)
-                .should('exist');
-        } else {
-            this.uploadFile(imageArr25);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(23)
-                .should('exist');
-        }
-    }
+    // uploadFiletoProject(projectTitle) {
+    //     if (projectTitle === acal[1] || projectTitle === acal[2] || projectTitle === acal[3] || projectTitle === acal[4]) {
+    //         this.uploadFile(imageArr25);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(11)
+    //             .should('exist');
+    //     } else if (projectTitle === acal[0]) {
+    //         this.uploadFile(imageArr);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(17)
+    //             .should('exist');
+    //     } else {
+    //         this.uploadFile(imageArr25);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(23)
+    //             .should('exist');
+    //     }
+    // }
 
-    uploadOneFiletoProjectWarning(projectTitle) {
-        if (projectTitle === acal[1] || projectTitle === acal[2] || projectTitle === acal[3] || projectTitle === acal[4]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
-        } else if (projectTitle === acal[0]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
-        } else {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
-        }
+    // uploadOneFiletoProjectWarning(projectTitle) {
+    //     if (projectTitle === acal[1] || projectTitle === acal[2] || projectTitle === acal[3] || projectTitle === acal[4]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
+    //     } else if (projectTitle === acal[0]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
+    //     } else {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
+    //     }
 
-    }
+    // }
 
-    uploadFile(pictureArray) {
-        cy.get(s.uploadBTN).attachFile(pictureArray);
-        cy.wait(60000);
-        cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
-    }
+    // uploadFile(pictureArray) {
+    //     cy.get(s.uploadBTN).attachFile(pictureArray);
+    //     cy.wait(60000);
+    //     cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
+    // }
 
-    uploadFiletoProject(projectTitle) {
-        if (projectTitle === gesh[0] || projectTitle === gesh[1] || projectTitle === gesh[2] || projectTitle === gesh[4] || projectTitle === gesh[5] || projectTitle === gesh[7] || projectTitle === gesh[9] || projectTitle === gesh[10] || projectTitle === gesh[11] || projectTitle === gesh[12] || projectTitle === gesh[14] || projectTitle === gesh[15] || projectTitle === gesh[16] || projectTitle === gesh[17] || projectTitle === gesh[19] || projectTitle === gesh[20] || projectTitle === gesh[21] || projectTitle === gesh[22] || projectTitle === gesh[23] || projectTitle === gesh[24] || projectTitle === gesh[25] || projectTitle === gesh[26] || projectTitle === gesh[27] || projectTitle === gesh[28] || projectTitle === gesh[29] || projectTitle === gesh[30] || projectTitle === gesh[31] || projectTitle === gesh[32] || projectTitle === gesh[33] || projectTitle === gesh[34] || projectTitle === gesh[35] || projectTitle === gesh[36] || projectTitle === gesh[37] || projectTitle === gesh[38] || projectTitle === gesh[40] || projectTitle === gesh[41] || projectTitle === gesh[43] || projectTitle === gesh[44] || projectTitle === gesh[45] || projectTitle === gesh[46] || projectTitle === gesh[47] || projectTitle === gesh[48] || projectTitle === gesh[49] || projectTitle === gesh[50] || projectTitle === gesh[51] || projectTitle === gesh[52] || projectTitle === gesh[53] || projectTitle === gesh[54]) {
-            this.uploadFile(imageArr1);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(11)
-                .should('exist');
-        } else if (projectTitle === gesh[6] || projectTitle === gesh[8] || projectTitle === gesh[13]) {
-            this.uploadFile(imageArr2);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(17)
-                .should('exist');
-        } else {
-            this.uploadFile(imageArr25);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(23)
-                .should('exist');
-        }
-    }
+    // uploadFiletoProject(projectTitle) {
+    //     if (projectTitle === gesh[0] || projectTitle === gesh[1] || projectTitle === gesh[2] || projectTitle === gesh[4] || projectTitle === gesh[5] || projectTitle === gesh[7] || projectTitle === gesh[9] || projectTitle === gesh[10] || projectTitle === gesh[11] || projectTitle === gesh[12] || projectTitle === gesh[14] || projectTitle === gesh[15] || projectTitle === gesh[16] || projectTitle === gesh[17] || projectTitle === gesh[19] || projectTitle === gesh[20] || projectTitle === gesh[21] || projectTitle === gesh[22] || projectTitle === gesh[23] || projectTitle === gesh[24] || projectTitle === gesh[25] || projectTitle === gesh[26] || projectTitle === gesh[27] || projectTitle === gesh[28] || projectTitle === gesh[29] || projectTitle === gesh[30] || projectTitle === gesh[31] || projectTitle === gesh[32] || projectTitle === gesh[33] || projectTitle === gesh[34] || projectTitle === gesh[35] || projectTitle === gesh[36] || projectTitle === gesh[37] || projectTitle === gesh[38] || projectTitle === gesh[40] || projectTitle === gesh[41] || projectTitle === gesh[43] || projectTitle === gesh[44] || projectTitle === gesh[45] || projectTitle === gesh[46] || projectTitle === gesh[47] || projectTitle === gesh[48] || projectTitle === gesh[49] || projectTitle === gesh[50] || projectTitle === gesh[51] || projectTitle === gesh[52] || projectTitle === gesh[53] || projectTitle === gesh[54]) {
+    //         this.uploadFile(imageArr1);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(11)
+    //             .should('exist');
+    //     } else if (projectTitle === gesh[6] || projectTitle === gesh[8] || projectTitle === gesh[13]) {
+    //         this.uploadFile(imageArr2);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(17)
+    //             .should('exist');
+    //     } else {
+    //         this.uploadFile(imageArr25);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(23)
+    //             .should('exist');
+    //     }
+    // }
 
-    uploadOneFiletoProjectWarning(projectTitle) {
-        if (projectTitle === gesh[0] || projectTitle === gesh[1] || projectTitle === gesh[2] || projectTitle === gesh[4] || projectTitle === gesh[5] || projectTitle === gesh[7] || projectTitle === gesh[9] || projectTitle === gesh[10] || projectTitle === gesh[11] || projectTitle === gesh[12] || projectTitle === gesh[14] || projectTitle === gesh[15] || projectTitle === gesh[16] || projectTitle === gesh[17] || projectTitle === gesh[19] || projectTitle === gesh[20] || projectTitle === gesh[21] || projectTitle === gesh[22] || projectTitle === gesh[23] || projectTitle === gesh[24] || projectTitle === gesh[25] || projectTitle === gesh[26] || projectTitle === gesh[27] || projectTitle === gesh[28] || projectTitle === gesh[29] || projectTitle === gesh[30] || projectTitle === gesh[31] || projectTitle === gesh[32] || projectTitle === gesh[33] || projectTitle === gesh[34] || projectTitle === gesh[35] || projectTitle === gesh[36] || projectTitle === gesh[37] || projectTitle === gesh[38] || projectTitle === gesh[40] || projectTitle === gesh[41] || projectTitle === gesh[43] || projectTitle === gesh[44] || projectTitle === gesh[45] || projectTitle === gesh[46] || projectTitle === gesh[47] || projectTitle === gesh[48] || projectTitle === gesh[49] || projectTitle === gesh[50] || projectTitle === gesh[51] || projectTitle === gesh[52] || projectTitle === gesh[53] || projectTitle === gesh[54]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
-        } else if (projectTitle === pb[6] || projectTitle === pb[8] || projectTitle === pb[13]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
-        } else {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
-        }
+    // uploadOneFiletoProjectWarning(projectTitle) {
+    //     if (projectTitle === gesh[0] || projectTitle === gesh[1] || projectTitle === gesh[2] || projectTitle === gesh[4] || projectTitle === gesh[5] || projectTitle === gesh[7] || projectTitle === gesh[9] || projectTitle === gesh[10] || projectTitle === gesh[11] || projectTitle === gesh[12] || projectTitle === gesh[14] || projectTitle === gesh[15] || projectTitle === gesh[16] || projectTitle === gesh[17] || projectTitle === gesh[19] || projectTitle === gesh[20] || projectTitle === gesh[21] || projectTitle === gesh[22] || projectTitle === gesh[23] || projectTitle === gesh[24] || projectTitle === gesh[25] || projectTitle === gesh[26] || projectTitle === gesh[27] || projectTitle === gesh[28] || projectTitle === gesh[29] || projectTitle === gesh[30] || projectTitle === gesh[31] || projectTitle === gesh[32] || projectTitle === gesh[33] || projectTitle === gesh[34] || projectTitle === gesh[35] || projectTitle === gesh[36] || projectTitle === gesh[37] || projectTitle === gesh[38] || projectTitle === gesh[40] || projectTitle === gesh[41] || projectTitle === gesh[43] || projectTitle === gesh[44] || projectTitle === gesh[45] || projectTitle === gesh[46] || projectTitle === gesh[47] || projectTitle === gesh[48] || projectTitle === gesh[49] || projectTitle === gesh[50] || projectTitle === gesh[51] || projectTitle === gesh[52] || projectTitle === gesh[53] || projectTitle === gesh[54]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
+    //     } else if (projectTitle === pb[6] || projectTitle === pb[8] || projectTitle === pb[13]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
+    //     } else {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
+    //     }
 
-    }
+    // }
 
-    uploadFile(pictureArray) {
-        cy.get(s.uploadBTN).attachFile(pictureArray);
-        cy.wait(60000);
-        cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
-    }
+    // uploadFile(pictureArray) {
+    //     cy.get(s.uploadBTN).attachFile(pictureArray);
+    //     cy.wait(60000);
+    //     cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
+    // }
 
-    uploadFiletoProject(projectTitle) {
-        if (projectTitle === grus[0] || projectTitle === grus[1] || projectTitle === grus[2] || projectTitle === grus[3] || projectTitle === grus[6] || projectTitle === grus[7] || projectTitle === grus[8] || projectTitle === grus[11]) {
-            this.uploadFile(imageArr3);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(11)
-                .should('exist');
-        } else if (projectTitle === grus[4] || projectTitle === grus[5] || projectTitle === grus[10]) {
-            this.uploadFile(imageArr2);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(17)
-                .should('exist');
-        } else {
-            this.uploadFile(imageArr25);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(23)
-                .should('exist');
-        }
-    }
+    // uploadFiletoProject(projectTitle) {
+    //     if (projectTitle === grus[0] || projectTitle === grus[1] || projectTitle === grus[2] || projectTitle === grus[3] || projectTitle === grus[6] || projectTitle === grus[7] || projectTitle === grus[8] || projectTitle === grus[11]) {
+    //         this.uploadFile(imageArr3);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(11)
+    //             .should('exist');
+    //     } else if (projectTitle === grus[4] || projectTitle === grus[5] || projectTitle === grus[10]) {
+    //         this.uploadFile(imageArr2);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(17)
+    //             .should('exist');
+    //     } else {
+    //         this.uploadFile(imageArr25);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(23)
+    //             .should('exist');
+    //     }
+    // }
 
-    uploadOneFiletoProjectWarning(projectTitle) {
-        if (projectTitle === grus[0] || projectTitle === grus[1] || projectTitle === grus[2] || projectTitle === grus[3] || projectTitle === grus[6] || projectTitle === grus[7] || projectTitle === grus[8] || projectTitle === grus[11]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
-        } else if (projectTitle === grus[4] || projectTitle === grus[5] || projectTitle === grus[10]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
-        } else {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
-        }
+    // uploadOneFiletoProjectWarning(projectTitle) {
+    //     if (projectTitle === grus[0] || projectTitle === grus[1] || projectTitle === grus[2] || projectTitle === grus[3] || projectTitle === grus[6] || projectTitle === grus[7] || projectTitle === grus[8] || projectTitle === grus[11]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
+    //     } else if (projectTitle === grus[4] || projectTitle === grus[5] || projectTitle === grus[10]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
+    //     } else {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
+    //     }
 
-    }
+    // }
 
-    uploadFile(pictureArray) {
-        cy.get(s.uploadBTN).attachFile(pictureArray);
-        cy.wait(60000);
-        cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
-    }
+    // uploadFile(pictureArray) {
+    //     cy.get(s.uploadBTN).attachFile(pictureArray);
+    //     cy.wait(60000);
+    //     cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
+    // }
 
-    uploadFiletoProject(projectTitle) {
-        if (projectTitle === wand[0] || projectTitle === wand[1] || projectTitle === wand[2] || projectTitle === wand[3] || projectTitle === wand[4] || projectTitle === wand[5] || projectTitle === wand[6] || projectTitle === wand[7] || projectTitle === wand[8] || projectTitle === wand[9]) {
-            this.uploadFile(imageArr1);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(11)
-                .should('exist');
-        } else if (projectTitle === acal[0]) {
-            this.uploadFile(imageArr);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(17)
-                .should('exist');
-        } else {
-            this.uploadFile(imageArr25);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(23)
-                .should('exist');
-        }
-    }
+    // uploadFiletoProject(projectTitle) {
+    //     if (projectTitle === wand[0] || projectTitle === wand[1] || projectTitle === wand[2] || projectTitle === wand[3] || projectTitle === wand[4] || projectTitle === wand[5] || projectTitle === wand[6] || projectTitle === wand[7] || projectTitle === wand[8] || projectTitle === wand[9]) {
+    //         this.uploadFile(imageArr1);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(11)
+    //             .should('exist');
+    //     } else if (projectTitle === acal[0]) {
+    //         this.uploadFile(imageArr);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(17)
+    //             .should('exist');
+    //     } else {
+    //         this.uploadFile(imageArr25);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(23)
+    //             .should('exist');
+    //     }
+    // }
 
-    uploadOneFiletoProjectWarning(projectTitle) {
-        if (projectTitle === wand[0] || projectTitle === wand[1] || projectTitle === wand[2] || projectTitle === wand[3] || projectTitle === wand[4] || projectTitle === wand[5] || projectTitle === wand[6] || projectTitle === wand[7] || projectTitle === wand[8] || projectTitle === wand[9]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
-        } else if (projectTitle === acal[0]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
-        } else {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
-        }
+    // uploadOneFiletoProjectWarning(projectTitle) {
+    //     if (projectTitle === wand[0] || projectTitle === wand[1] || projectTitle === wand[2] || projectTitle === wand[3] || projectTitle === wand[4] || projectTitle === wand[5] || projectTitle === wand[6] || projectTitle === wand[7] || projectTitle === wand[8] || projectTitle === wand[9]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
+    //     } else if (projectTitle === acal[0]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
+    //     } else {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
+    //     }
 
-    }
+    // }
 
-    uploadFile(pictureArray) {
-        cy.get(s.uploadBTN).attachFile(pictureArray);
-        cy.wait(60000);
-        cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
-    }
+    // uploadFile(pictureArray) {
+    //     cy.get(s.uploadBTN).attachFile(pictureArray);
+    //     cy.wait(60000);
+    //     cy.get('[class^="chakra-spinner"]', { timeout: 180000 }).should('not.exist')
+    // }
 
-    uploadFiletoProject(projectTitle) {
-        if (projectTitle === foto[0] || projectTitle === foto[1] || projectTitle === foto[3]) {
-            this.uploadFile(imageArr1);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(11)
-                .should('exist');
-        } else if (projectTitle === acal[2]) {
-            this.uploadFile(imageArr11);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(17)
-                .should('exist');
-        } else {
-            this.uploadFile(imageArr25);
-            cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
-                .eq(23)
-                .should('exist');
-        }
-    }
+    // uploadFiletoProject(projectTitle) {
+    //     if (projectTitle === foto[0] || projectTitle === foto[1] || projectTitle === foto[3]) {
+    //         this.uploadFile(imageArr1);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(11)
+    //             .should('exist');
+    //     } else if (projectTitle === acal[2]) {
+    //         this.uploadFile(imageArr11);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(17)
+    //             .should('exist');
+    //     } else {
+    //         this.uploadFile(imageArr25);
+    //         cy.get('[class*="css-ir7jip"] [class*="css-ljol6d"]')
+    //             .eq(23)
+    //             .should('exist');
+    //     }
+    // }
 
-    uploadOneFiletoProjectWarning(projectTitle) {
-        if (projectTitle === foto[0] || projectTitle === foto[1] || projectTitle === foto[3]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
-        } else if (projectTitle === acal[2]) {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
-        } else {
-            cy.get(s.uploadBTN).attachFile(onePhoto);
-            cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
-        }
+    // uploadOneFiletoProjectWarning(projectTitle) {
+    //     if (projectTitle === foto[0] || projectTitle === foto[1] || projectTitle === foto[3]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 12 photos').should('exist')
+    //     } else if (projectTitle === acal[2]) {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 18 photos and one photo for cover').should('exist')
+    //     } else {
+    //         cy.get(s.uploadBTN).attachFile(onePhoto);
+    //         cy.contains('[class*="chakra-text"]', 'Select 24 photos and one photo for cover').should('exist')
+    //     }
 
-    }
+    // }
 
 }
 export default new Common();
