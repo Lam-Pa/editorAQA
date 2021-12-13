@@ -54,4 +54,4 @@ uploadOneFiletoProjectWarning(projectTitle) {
     }
 }
 }
-export default new CommonFoto();
+export default new CommonFoto();  

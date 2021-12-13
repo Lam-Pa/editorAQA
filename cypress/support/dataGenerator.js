@@ -19,6 +19,9 @@ const calName = ['Wandkalender A4 quer', 'Wandkalender A4 hoch', 'Wandkalender A
 'Echtfotokalender A3 hoch', 'Echtfotokalender A4 quer', 'Jahresplaner A2', 'Jahresplaner A3', 'Klappkalender A2',
 'Küchenkalender', 'Klappkalender A3', 'Vintage Kalender']
 
+const wandName = ['Flexible Fotowand mit Klebemagnet', 'Poster', 'Acrylglas', 'Leinwand', 'Forex', 'Acrylglas mit Rahmen', 'Acrylglas auf Alu-Dibond', 
+'Alu-dibond', 'Leinwand mit Rahmen', 'Poster auf echtem Fotopapier']
+
 export const getProject = () => {
     return {
         title : faker.random.arrayElement(project)
@@ -31,6 +34,11 @@ export const getProjectCal = () => {
     }
 }
 
+export const getProjectWallDec = () => {
+    return {
+        title : faker.random.arrayElement(wandName)
+    }
+}
 
 // export const getMultiplePhotographysData = (counter) => {
 //     let photographyArr = []
